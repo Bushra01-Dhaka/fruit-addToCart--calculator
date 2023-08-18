@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh Fruits</title>
+    <!-- gooogle font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- css link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        body {
+
+            font-family: 'Montserrat', sans-serif;
+        }
+        .buy-btn
+        {
+            display: none;
+        }
+
+        @media screen and (min-width:576px) and (max-width:900px)
+        {
+            .flex-box-container 
+            {
+                flex-direction: column;
+            }
+        }
+
+        @media screen and (max-width:576px) 
+        {
+            .flex-box-container 
+            {
+                flex-direction: column;
+            }
+            .grid-container 
+            {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <h1 class="text-5xl font-bold text-center py-4">Fresh Fruits</h1>
+    </header>
+    <main class="mt-12">
+        <div class="flex-box-container flex justify-center align-center gap-4">
+
+            <div class="grid-container grid grid-cols-3 gap-2 px-2">
+                <!-- 1 -->
+                <div class="p-4 bg-[#EADBC8] rounded-md">
+                    <img class="mx-auto" src="images/fruit6.png" alt="">
+                    <h3 class="text-3xl font-medium mt-2">Strawberry</h3>
+                    <p class="my-2 text-xl">Lorem ipsum dolor sit amet.</p>
+                    <h4 id="" class="my-2 text-2xl">Price: $ <span>18</span></h4>
+                    <button class="bg-[#900C3F] hover:bg-[#6C3428] px-8 py-2 border-0 text-white rounded-md" onclick="eventHandler(this)">ADD TO CART</button>
+                </div>
+                <!-- 2 -->
+                <div class="p-4 bg-[#EADBC8] rounded-md">
+                    <img class="mx-auto" src="images/fruit7.png" alt="">
+                    <h3 class="text-3xl font-medium mt-2">Orange</h3>
+                    <p class="my-2 text-xl">Lorem ipsum dolor sit amet.</p>
+                    <h4 class="my-2 text-2xl">Price: $ <span>17</span></h4>
+                    <button class="bg-[#900C3F] hover:bg-[#6C3428] px-8 py-2 border-0 text-white rounded-md"  onclick="eventHandler(this)">ADD TO CART</button>
+                </div>
+
+                <!-- 3 -->
+                <div class="p-4 bg-[#EADBC8] rounded-md">
+                    <img class="mx-auto"  src="images/fruit9.png" alt="">
+                    <h3 class="text-3xl font-medium mt-2">Banana</h3>
+                    <p class="my-2 text-xl">Lorem ipsum dolor sit amet.</p>
+                    <h4 class="my-2 text-2xl">Price: $ <span>20</span></h4>
+                    <button class="bg-[#900C3F] hover:bg-[#6C3428] px-8 py-2 border-0 text-white rounded-md"  onclick="eventHandler(this)">ADD TO CART</button>
+                </div>
+
+
+            </div>
+            <div  class="text-box flex justify-center align-center pt-12">
+               <div>
+                <h2 class="text-4xl font-bold">Added to Cart</h2>
+                <div id="selected-items">
+
+                </div>
+                <div id="selected-buy-btn">
+
+                </div>
+                <h3 class="text-3xl font-medium mt-4">Total: $<span id="total-field">00</span></h3>
+                <h3 class="text-3xl font-medium">discount: $<span id="discount-field">30</span></h3>
+                <hr class="my-2">
+                <h2 class="text-3xl font-bold">Grand Total: $<span id="grand-total-field">00</span></h2>
+                <button class=" buy-btn bg-[#900C3F] hover:bg-[#6C3428] px-8 py-2 border-0 text-white rounded-md mt-4"id="btn-buy-now">BUY NOW</button>
+
+               </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- js -->
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>
